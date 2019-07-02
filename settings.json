@@ -3,7 +3,7 @@
     "enabled": true,
     "file": false
   },
-  "debug": false,
+  "debug": true,
   "aliasfile": "aliases",
   "envfile": "env.pickle",
   "userspacefile": "userspaces.pickle",
@@ -25,22 +25,24 @@
     "countdown_game": {},
     "spam": {},
     "ignorelist": {"kentirc":["bar"]},
-    "print": {"printer": "gap-fttc.wfv.me"},
+    "printr": {
+      "printer": "gap-fttc.wfv.me"
+    }
   },
   "servers": [
     {
-      "IRCNet": "Holmes",
-      "IRCUser": "Marvin",
-      "IRCName": "Marvin",
-      "IRCHost": "holmes.freenode.net",
+      "IRCNet": "kentirc",
+      "IRCUser": "DevMarvin",
+      "IRCName": "DevMarvin",
+      "IRCHost": "chat.freenode.net",
       "IRCNick": "DevMarvin",
-      "IRCPort": 6666,
+      "IRCPort": 6667,
       "UseSSL": false,
       "IRCPass": "",
       "AutoJoin": [
-        "#pyperbot"
+        "##devmarvin"
       ],
-      "Admins": []
+      "Admins": ["MagicalWill"]
     }
   ]
 }

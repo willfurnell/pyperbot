@@ -4,23 +4,24 @@ from escpos.printer import Network
 
 
 @plugin
-class printr:
+class Printr:
     def __init__(self, bot, config):
         self.bot = bot
         self.config = config
-        self.printer = None
+        self.printer = self.config.get("printer")
+        self.p = None
 
     @onload
     def onload(self):
-        self.printer = Network(self.config.get('printer'))
+        self.p = Network(self.printer)
+        print("printer loaded")
 
     @unload
     def unload(self):
-        self.printer = None
+        self.p = None
 
     @command("print")
     def printr(self, msg):
-        self.printer.text(msg.text)
-        self.printer.cut()
+        self.p.text(msg.text)
+        self.p.cut()
         return msg.reply(text="Printed!")
-
