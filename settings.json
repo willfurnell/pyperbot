@@ -24,7 +24,8 @@
     "weather": {},
     "countdown_game": {},
     "spam": {},
-    "ignorelist": {"kentirc":["bar"]}
+    "ignorelist": {"kentirc":["bar"]},
+    "print": {"printer": "gap-fttc.wfv.me"},
   },
   "servers": [
     {
